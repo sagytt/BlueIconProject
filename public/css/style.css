@@ -1,13 +1,173 @@
-body{
-    background-color: #000000;
+@media (min-width: 1440px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1440px;
+    }
 }
 
-.navbar-light .navbar-nav .nav-link
-{
-    color: white;
+table tr td:last-child {
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.header-color {
+    background: black;
+}
+
+.navbar {
+    background: black;
+}
+
+.navbar .navbar-brand img {
+    width: 50%;
+}
+
+body {
+    background: #151515;;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+color: white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
-    color: #27a330;
+color: #27a330;
+}
+
+.supplier-table {
+font-size: 12px;
+}
+
+.supplier-table th {
+    color: white;
+}
+
+.table th, .table td {
+    padding: 0.75rem 0.5rem;
+}
+
+.table-text {
+    font-size: 15px;
+}
+
+.buttonGlowGreen {
+    background-color: #5AC515;
+    padding: 0.25rem 1.25rem;
+}
+
+.modal-background {
+background-color: #222222;
+}
+
+input, select, textarea {
+background-color: #222222 !important;
+
+}
+
+#modal-supplier {
+color: white;
+}
+
+.form-control:valid {
+background-color: #222222 !important;
+}
+
+.card-color {
+background: #252525;
+}
+
+.top-supplier table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: #2C2C2C !important;
+    margin-bottom: 30px;
+}
+
+
+.top-supplier th, td {
+    text-align: left;
+    padding: 7px;
+    /*border-bottom: 2px solid #2C2C2C;*/
+    /*border-top: 1px solid #2C2C2C;*/
+}
+
+.top-supplier tr:nth-child(even) {
+    background-color: #1F1F1F !important;
+}
+
+.supplier-list-table table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: #2C2C2C !important;
+}
+
+
+.supplier-list-table th, td {
+    text-align: left;
+    padding: 7px;
+    /*border-bottom: 2px solid #2C2C2C;*/
+    /*border-top: 1px solid #2C2C2C;*/
+}
+
+.supplier-list-table tr:nth-child(even) {
+    background-color: #1F1F1F !important;
+}
+
+#rectangle {
+    width: 265px;
+    height: 72px;
+    left: 1015px;
+    top: 276px;
+
+    background: #252525;
+    border-radius: 4px;
+}
+
+.text-header{
+    position: absolute;
+    width: 147px;
+    height: 21px;
+    left: 1082px;
+    top: 294px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+#domain{
+    position: absolute;
+    left: 66.67%;
+    right: 25%;
+    top: 62.5%;
+    bottom: 29.17%;
+    background: #DADADA;
+}
+
+.arsp-card{
+    position: absolute;
+    width: 265px;
+    height: 72px;
+    left: 1015px;
+    top: 276px;
+
+    background: #252525;
+    border-radius: 4px;
+}
+
+.card-body-arsp{
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    height: 87px;
+}
+#rectangle2{
+    background: #303030;
+
 }

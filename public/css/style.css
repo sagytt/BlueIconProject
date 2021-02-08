@@ -61,17 +61,20 @@ font-size: 12px;
 background-color: #222222;
 }
 
-input, select, textarea {
-background-color: #222222 !important;
+/*input, select, textarea {*/
+/*background-color: #222222 !important;*/
+/*!*border: 1px solid #000000;*!*/
 
-}
+/*}*/
 
 #modal-supplier {
 color: white;
 }
 
-.form-control:valid {
+.form-control {
 background-color: #222222 !important;
+border: 1px solid #2B2929 !important;
+
 }
 
 .card-color {
@@ -169,5 +172,13 @@ background: #252525;
 }
 #rectangle2{
     background: #303030;
+}
 
+.modal-header {
+
+     border-bottom: 1px solid #222222;
+}
+
+.modal-footer {
+    border-top: 1px solid #222222;
 }

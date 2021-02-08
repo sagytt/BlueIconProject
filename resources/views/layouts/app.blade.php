@@ -27,7 +27,7 @@
 <body >
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-            <div class="container-fluid">
+            <div class="container header-color">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{asset('images/logo.png')}}">
                 </a>
@@ -81,7 +81,7 @@
         </nav>
 
         <main class="py-4">
-            <div class="container-fluid">
+            <div class="container">
             @include('partials.alerts')
             @yield('content')
             </div>

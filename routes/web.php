@@ -26,3 +26,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 });
 
 Route::get('/user', 'UserController@index')->name('user.index');
+
+Route::post('/supplier/request/save/{id}', 'UserController@saveSupplierRequest');

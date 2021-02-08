@@ -21,7 +21,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" id="supplierForm" action="">
+                <form method="POST" id="supplierForm" action="{{ url('supplier/request/save/'.Auth::user()->id)}}">
                     @csrf
                     <div class="form-group">
                         <i class="icon-feather-mail"></i>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">INDUSTRY</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" name="industry">
                             <option disabled>Which industry do you belong to?</option>
                             <option>INDUSTERY 1</option>
                             <option>INDUSTERY 2</option>

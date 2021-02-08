@@ -182,3 +182,8 @@ background: #252525;
 .modal-footer {
     border-top: 1px solid #222222;
 }
+.card-supplier {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}

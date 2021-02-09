@@ -26,11 +26,11 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('password')
         ]);
 
-        $supplier = User::create([
-            'name' => 'supplier User',
-            'email' => 'supplier@supplier.com',
-            'password' => Hash::make('password')
-        ]);
+//        $supplier = User::create([
+//            'name' => 'supplier User',
+//            'email' => 'supplier@supplier.com',
+//            'password' => Hash::make('password')
+//        ]);
 
         $user = User::create([
             'name' => 'Generic User',
@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         $admin->roles()->attach($adminRole);
-        $supplier->roles()->attach($supplierRole);
+//        $supplier->roles()->attach($supplierRole);
         $user->roles()->attach($userRole);
     }
 }

@@ -85,7 +85,7 @@ background: #252525;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    background-color: #2C2C2C !important;
+    background-color: #1F1F1F !important;
     margin-bottom: 30px;
 }
 
@@ -98,7 +98,7 @@ background: #252525;
 }
 
 .top-supplier tr:nth-child(even) {
-    background-color: #1F1F1F !important;
+    background-color: #2C2C2C !important;
 }
 
 .supplier-list-table table{
@@ -186,4 +186,14 @@ background: #252525;
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+}
+
+.top-supplier th{
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.top-supplier td{
+    font-size: 13px;
+
 }

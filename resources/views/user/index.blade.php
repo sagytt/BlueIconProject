@@ -1,45 +1,46 @@
 @extends('layouts.app')
+@include('modals.supplier')
 @section('content')
-    @include('modals.supplier')
-    <div>
-        <div class="row">
-            <div class="col-lg-12">
-                <header class="text-white pt-lg-5 pb-lg-5 mb-5">
-                    <div class="container text-center">
-                        <h1>Handpicked and vetted suppliers for <br>your next ecom store</h1>
-                        <p class="lead">Ecomhunt tracker is the fastest and easiest way to understand what's going on
-                            behind your stores and fix</p>
-                    </div>
-                </header>
-            </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <header class="text-white pt-lg-5 pb-lg-5 mb-5">
+                <div class="text-center">
+                    <h1>Handpicked and vetted suppliers for <br>your next ecom store</h1>
+                    <p class="lead">Ecomhunt tracker is the fastest and easiest way to understand what's going on
+                        behind your stores and fix</p>
+                </div>
+            </header>
         </div>
-        <div class="row">
-            <div class="col-lg-9 col-xs-12">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="top-supplier">
-                            <table class="pb-5 text-white ">
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-xs-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="top-supplier">
+                        <table class="pb-5 text-white ">
+                            <tr>
+                                <th><i class="fas fa-chart-line"></i> Top 10 Suppliers</th>
+                                <th>Rating</th>
+                                <th>Deal</th>
+                                <th>Link</th>
+                            </tr>
+                            @foreach($suppliers as $key => $supplier)
                                 <tr>
-                                    <th><i class="fas fa-chart-line"></i> Top 10 Suppliers</th>
-                                    <th>Rating</th>
-                                    <th>Deal</th>
-                                    <th>Link</th>
+                                    <td>{{$key+1}} {{$supplier->name}}</td>
+                                    <td>3.4/5</td>
+                                    <td>20% Discount</td>
+                                    <td>
+                                        <button class="btn buttonGlowGreen">VISIT</button>
+                                    </td>
                                 </tr>
-                                @foreach($suppliers as $key => $supplier)
-                                    <tr>
-                                        <td>{{$key+1}} {{$supplier->name}}</td>
-                                        <td>3.4/5</td>
-                                        <td>20% Discount</td>
-                                        <td>
-                                            <button class="btn buttonGlowGreen">VISIT</button>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </table>
-                        </div>
-                        <div class="supplier-list-table">
+                            @endforeach
+                        </table>
+                    </div>
+                    <div class="supplier-list-table">
+                        <div class="table-responsive">
                             <table class="text-white">
-                                <tr class="bg-dark pt-3 pb-4">
+                                <tr class="pt-3 pb-4" style="background-color: #1F1F1F">
                                     <td class="pl-3">
                                         <svg width="30" height="30" id="rectangle2" viewBox="0 0 22 22" fill="green"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +82,10 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="table table-striped table-dark table-hover supplier-table">
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover supplier-table"
+                                   style="background-color: #151515">
                                 <thead>
                                 <tr>
                                     <th scope="col" style="width: 10%;">SOURCING</th>
@@ -113,8 +117,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-xs-12">
-                <div class="row">
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <div class="row">
+                <div class="col-12">
                     <div class="card text-white card-color mb-2">
                         <div class="card-body-arsp">
                             <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
@@ -132,42 +138,43 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="pt-4">
-                        <img src="{{asset('images/Screenshot.png')}}" style="width: 17.5rem">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-4">
+                    <img src="{{asset('images/Screenshot.png')}}" style="width: 100%">
                 </div>
-                <div class="row">
-                    <div class="pt-4">
-                        <div class="card text-white card-color mb-3 mt-3" style="max-width: 18rem;">
-                            <div class="card-header">Shipping Calculator</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col">
-                                                <label style="font-size: 7px;">ORIGIN</label>
-                                                <input type="text" class="form-control bg-dark" placeholder="China">
-                                            </div>
-                                            <i class="fas fa-exchange-alt"></i>
-                                            <div class="col">
-                                                <label style="font-size: 7px;">DESTINATION</label>
-                                                <input type="text" class="form-control bg-dark" placeholder="Israel">
-                                            </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-4">
+                    <div class="card text-white card-color mb-3 mt-3" >
+                        <div class="card-header">Shipping Calculator</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label style="font-size: 7px;">ORIGIN</label>
+                                            <input type="text" class="form-control bg-dark" placeholder="China">
                                         </div>
-                                    </form>
-                                </div>
-                                <a href="" class="float-right pt-5 text-success">CALCULATE</a>
+                                        <i class="fas fa-exchange-alt"></i>
+                                        <div class="col">
+                                            <label style="font-size: 7px;">DESTINATION</label>
+                                            <input type="text" class="form-control bg-dark" placeholder="Israel">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
+                            <a href="" class="float-right pt-5 text-success">CALCULATE</a>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="pt-4">
-                        <img src="{{asset('images/image 3.png')}}" style="width: 17.5rem">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-4">
+                    <img src="{{asset('images/image 3.png')}}" style="width: 100%">
                 </div>
             </div>
         </div>
     </div>
+
 @endsection

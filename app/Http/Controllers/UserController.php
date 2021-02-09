@@ -15,6 +15,8 @@ class UserController extends Controller
             ->where('role_id', '2')
             ->get();
 
+
+
         return view('user.index')->with('suppliers', $suppliers);
     }
 

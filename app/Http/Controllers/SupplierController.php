@@ -73,7 +73,6 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $supplier = Supplier::where('user_id','=', $id)->first();
         $supplier->status = $request->status;
         $supplier->name = $request->name;

@@ -28,3 +28,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::get('/user', 'UserController@index')->name('user.index');
 
 Route::post('/supplier/request/save/{id}', 'UserController@saveSupplierRequest');
+
+Route::get('/supplier/supplier-panel/{id}', 'SupplierController@index');
+
+Route::post('supplier/data/save/{id}', 'SupplierController@update');
+
+Route::namespace('Supplier')->prefix('supplier')->name('supplier.')->group(function (){
+
+
+});
+

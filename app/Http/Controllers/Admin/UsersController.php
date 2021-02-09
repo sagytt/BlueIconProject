@@ -58,6 +58,14 @@ class UsersController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
 
+        $user->requests()->delete();
+
+        foreach ($request->roles as $role){
+            if($role == '2'){
+                $user->supplier()->create();
+            }
+        }
+
         if($user->save()){
             $request->session()->flash('success', 'User has been updated');
         }else{

@@ -41,6 +41,10 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+    public function requests(){
+        return $this->hasOne('App\Requests');
+    }
+
     //If there is any roles in the current user
     public function hasAnyRoles($roles){
         if($this->roles()->whereIn('name', $roles)->first()){
@@ -56,4 +60,10 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function supplier(){
+        return $this->hasOne('App\Supplier');
+    }
+
+
 }

@@ -27,15 +27,22 @@ class AuthServiceProvider extends ServiceProvider
 
         // Checking if the current user is admin
         Gate::define('manage-users', function ($user){
-            return $user->hasAnyRoles(['admin', 'supplier']);
+            return $user->hasAnyRoles(['admin']);
         });
 
         Gate::define('edit-users', function ($user){
-            return $user->hasAnyRoles(['admin', 'supplier']);
+            return $user->hasAnyRoles(['admin']);
         });
 
         Gate::define('delete-users', function ($user){
             return $user->hasRole('admin');
+        });
+
+        Gate::define('supplier-panel', function ($user){
+            return $user->hasRole('supplier');
+        });
+        Gate::define('suppliers', function ($user){
+            return $user->hasAnyRoles(['user', 'supplier']);
         });
     }
 }

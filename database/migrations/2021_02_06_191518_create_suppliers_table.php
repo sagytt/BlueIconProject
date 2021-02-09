@@ -15,21 +15,22 @@ class CreateSuppliersTable extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
-            $table->string('status');
-            $table->string('name');
-            $table->integer('score');
-            $table->float('econhunt_deal');
-            $table->text('link');
-            $table->text('sourcing');
-            $table->float('cost');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('status')->nullable();
+            $table->string('name')->nullable();
+            $table->integer('score')->nullable();
+            $table->integer('econhunt_deal')->nullable();
+            $table->text('link')->nullable();
+            $table->text('sourcing')->nullable();
+            $table->float('cost')->nullable();
+            $table->text('processing')->nullable();
+            $table->string('special_line')->nullable();
+            $table->string('branding')->nullable();
+            $table->text('couriers')->nullable();
+            $table->text('support')->nullable();
+            $table->string('return_policy')->nullable();
+            $table->string('pod')->nullable();;
             $table->timestamps();
-            $table->text('processing');
-            $table->string('special_line');
-            $table->string('branding');
-            $table->text('couriers');
-            $table->text('support');
-            $table->string('return_policy');
-            $table->string('pod');
         });
     }
 

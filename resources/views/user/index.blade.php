@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    @include('modals.supplier')
     <div>
         <div class="row">
             <div class="col-lg-12">

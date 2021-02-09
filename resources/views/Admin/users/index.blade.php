@@ -15,6 +15,7 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Roles</th>
                                 <th scope="col">Actions</th>
+                                <th scope="col">Approval</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -39,6 +40,9 @@
                                         </form>
                                         @endcan
                                     </td>
+                                    @if($user->requests)
+                                    <td class="text-danger">Waiting for Supplier Approval...</td>
+                                    @endif
                                 </tr>
                             @endforeach
                             </tbody>

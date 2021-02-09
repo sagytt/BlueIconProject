@@ -49,10 +49,6 @@ class LoginController extends Controller
             $this->redirectTo = route('user.index');
             return $this->redirectTo;
         }
-        if (Auth::user()->hasRole('supplier')) {
-            $this->redirectTo = route('supplier.index');
-            return $this->redirectTo;
-        }
 
         $this->redirectTo = route('home');
         return $this->redirectTo;

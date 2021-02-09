@@ -69,6 +69,16 @@
                                         User Management
                                     </a>
                                     @endcan
+                                    @can('suppliers')
+                                        <a class="dropdown-item" href="{{route('user.index')}}">
+                                            Suppliers
+                                        </a>
+                                    @endcan
+                                    @can('supplier-panel')
+                                    <a class="dropdown-item" href="{{ url('supplier/supplier-panel/'.Auth::user()->id)}}">
+                                        Supplier Management
+                                    </a>
+                                    @endcan
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -83,7 +93,7 @@
         <main class="py-4">
             <div class="container">
             @include('partials.alerts')
-            @include('modals.supplier')
+
             @yield('content')
 
             </div>

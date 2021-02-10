@@ -4,10 +4,10 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Users</div>
+                <div class="card card-color ">
+                    <div class="card-header text-white">Users</div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table text-white">
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -29,11 +29,11 @@
 {{--                                        To authorize only admin access to edit functionality--}}
                                         @can('edit-users')
                                         <a href="{{route('admin.users.edit', $user->id)}}">
-                                            <button type="button" class="btn btn-primary float-left">Edit</button>
+                                            <button type="button" class="btn btn-primary">Edit</button>
                                         </a>
                                         @endcan
                                         @can('delete-users')
-                                        <form action="{{route('admin.users.destroy', $user)}}" method="POST" class="float-left">
+                                        <form action="{{route('admin.users.destroy', $user)}}" method="POST">
                                             @csrf
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger">Delete</button>

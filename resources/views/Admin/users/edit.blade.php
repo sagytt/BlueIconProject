@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Edit user {{$user->name}}</div>
+                <div class="card card-color">
+                    <div class="card-header text-white">Edit user {{$user->name}}</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-white">
                         <form action="{{route('admin.users.update', $user)}}" method="POST">
                             @csrf
                             {{ method_field('PUT') }}
